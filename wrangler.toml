@@ -1,0 +1,15 @@
+name = "easyarts"
+main = "src/index.js"
+compatibility_date = "2024-09-23"
+
+# Fichiers statiques du frontend (dashboard, pages, css, js)
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+# Base de données D1 (créée avec : wrangler d1 create easyarts-db)
+# Puis colle l'ID retourné ci-dessous à la place de "COLLE_TON_ID_ICI"
+[[d1_databases]]
+binding = "DB"
+database_name = "easyarts-db"
+database_id = "COLLE_TON_ID_ICI"
