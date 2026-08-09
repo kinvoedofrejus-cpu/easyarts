@@ -12,4 +12,4 @@ binding = "ASSETS"
 [[d1_databases]]
 binding = "DB"
 database_name = "easyarts-db"
-database_id = "COLLE_TON_ID_ICI"
+database_id = "29602f77-2b47-40c7-a16c-4727be283d42"
