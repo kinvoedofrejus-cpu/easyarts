@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EasyArts — Gestion de centre artistique</title>
+<link rel="icon" href="/img/logo.png" />
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<!-- ÉCRAN DE CONNEXION -->
+<div id="login-screen" class="login-screen">
+  <div class="login-card">
+    <div class="login-logo">
+      <img src="/img/logo.png" alt="EasyArts" onerror="this.style.display='none'" />
+      <h1>Easy<span>Arts</span></h1>
+      <p>Gérer · Enseigner · Inspirer</p>
+    </div>
+    <form id="login-form">
+      <label>Nom d'utilisateur</label>
+      <input type="text" id="login-username" required autocomplete="username" />
+      <label>Mot de passe</label>
+      <input type="password" id="login-password" required autocomplete="current-password" />
+      <div id="login-error" class="login-error"></div>
+      <button type="submit">Se connecter</button>
+    </form>
+  </div>
+</div>
+
+<!-- APPLICATION -->
+<div id="app" class="app hidden">
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <img src="/img/logo.png" alt="" onerror="this.style.display='none'" />
+      <div>
+        <h2>Easy<span>Arts</span></h2>
+        <p>Gestion de centre artistique</p>
+      </div>
+    </div>
+    <nav id="sidebar-nav" class="sidebar-nav"></nav>
+    <div class="sidebar-user">
+      <div class="sidebar-user-row">
+        <div class="avatar" id="user-avatar">A</div>
+        <div>
+          <strong id="user-name">—</strong>
+          <span id="user-role">—</span>
+        </div>
+      </div>
+      <button id="logout-btn" class="logout-btn">⏻ Déconnexion</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h1 id="page-title">Bienvenue !</h1>
+        <p id="page-subtitle">Voici ce qui se passe aujourd'hui dans votre centre.</p>
+      </div>
+      <div class="topbar-right">
+        <div class="search-box">
+          <input type="text" placeholder="Rechercher..." id="global-search" />
+          <span>🔍</span>
+        </div>
+        <div class="date-badge" id="date-badge"></div>
+      </div>
+    </header>
+
+    <section id="app-content" class="app-content"></section>
+  </main>
+</div>
+
+<div id="modal-root"></div>
+<div id="toast-root"></div>
+
+<script src="/js/api.js"></script>
+<script src="/js/print.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>
